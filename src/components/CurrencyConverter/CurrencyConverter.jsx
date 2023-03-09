@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import CurrencyCard from "./CurrencyCard/CurrencyCard";
 import axios from "axios";
 
-import reverse from "../assets/reverse-arrows.svg";
+import reverse from "../../assets/reverse-arrows.svg";
 
 import classes from "./CurrencyConverter.module.scss";
 
