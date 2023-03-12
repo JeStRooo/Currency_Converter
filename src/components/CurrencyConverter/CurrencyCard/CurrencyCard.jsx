@@ -7,14 +7,14 @@ import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import {MenuItem} from "@mui/material";
 
-const CurrencyCard = ({title, value, price, currency, convert, setValue}) => {
+const CurrencyCard = ({title, currencyValue, value, currency, convert, setCurrencyValue}) => {
   return (
     <div className={classes.converter__card}>
       <h2 className={classes.converter__card__title}>{title}</h2>
       <input type="number"
              className={classes.converter__card__input}
-             placeholder={`Текущий курс = ${value}`}
-             value={price || ""}
+             placeholder={`Текущий курс = ${currencyValue}`}
+             value={value || ""}
              onChange={e => convert(e.target.value)}
       />
       <FormControl sx={{m: 1, minWidth: 370, margin: 0}}>
@@ -23,7 +23,7 @@ const CurrencyCard = ({title, value, price, currency, convert, setValue}) => {
           labelId="demo-simple-select-autowidth-label"
           id="demo-simple-select-autowidth"
           defaultValue=""
-          onChange={e => setValue(e.target.value)}
+          onChange={e => setCurrencyValue(e.target.value)}
           autoWidth
           label="Валюта"
         >
