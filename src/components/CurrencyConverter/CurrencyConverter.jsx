@@ -38,6 +38,12 @@ const CurrencyConverter = () => {
     setFromValue(convertedNumber)
   }
 
+  const switchCurrency = () => {
+    setFromValue(toValue)
+    setToValue(fromValue)
+    setFromCurrencyValue(toCurrencyValue)
+    setToCurrencyValue(fromCurrencyValue)
+  }
 
   return (
     <div className={classes.converter}>
